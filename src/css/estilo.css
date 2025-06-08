@@ -1,0 +1,42 @@
+
+Header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    backdrop-filter:blur(7px);
+    box-shadow: 0 -5px 10px 3px black;
+}
+
+Header .logo , Footer .logo{
+    width: 10rem;
+    
+}
+
+Main{
+    padding-top:10rem;
+    background: fixed no-repeat center center/100% 100%;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+Footer{
+    background: cover no-repeat center center/100% 100%;
+    font-size: small;
+}
+
+
+
+Footer :is(a, li, p){
+    color: white;
+    text-decoration: none;
+    padding-block: .1rem;
+    list-style: none;
+    font-size: .7rem;
+}
+
+
+
+
+    
