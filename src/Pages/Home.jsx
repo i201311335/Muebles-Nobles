@@ -3,7 +3,7 @@ import { mSofa } from '@/assets/Imgs/sofa/modern/';
 export default function Home() {
     return (
         <>
-            <section className=' justify-content-center '>
+            <section className='col col-10 mx-auto'>
                 <div id="carouselExampleCrossfade" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
                     <div className="carousel-inner">
                         <div className="carousel-item active">

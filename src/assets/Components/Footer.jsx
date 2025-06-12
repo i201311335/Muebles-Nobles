@@ -8,7 +8,7 @@ export default function Footer() {
       <footer style={{ backgroundImage: `url(${bg[1]})` }}>
         <div className="d-flex justify-content-center border-top border-warning"  >  
             <div className="col col-3">
-                <li className='pt-4 px-3'>
+                <li className='pt-4 px-auto'>
                     <h6 className='pt-2 text-center'><i className='bi bi-book' /> Acerca de nosotros</h6>
                 </li>
     
@@ -25,7 +25,7 @@ export default function Footer() {
               </div> 
               
             <div className="d-grid col col-3 ">
-                <li className='pt-4 px-3'>
+                <li className='pt-4 px-auto'>
                     <h6 className="pt-2 text-center"><i className='bi bi-person' /> Inscríbete al boletín</h6>
                 </li>
                   <FormFooter />
@@ -39,10 +39,10 @@ export default function Footer() {
               </div>
               
             <div className="col col-3">
-                <ul className=' pt-4 px-5'>
+                <ul className=' pt-4 px-auto'>
                     <li><h6 className="pt-2"><i className="bi bi-telephone" /> Contáctanos</h6></li>
                     <ul>
-                        <li>Teléfono: +51 123 456 789</li>
+                        <li><a href="tel:+51123456789"></a> Teléfono: +51 123 456 789</li>
                     </ul>
                     <li><h6 className="pt-2"><i className="bi bi-envelope" /> Escríbenos : </h6></li>
                     <ul>
@@ -50,13 +50,14 @@ export default function Footer() {
                     </ul>
                     <li><h6 className="pt-2"><i className="bi bi-geo-alt" /> Visítanos:</h6></li>
                     <ul>
-                        <li>Av. Ejemplo 123, Lima, Perú</li>
+                        <li><a href="https://www.google.com/maps/place/Av.+Ejemplo+123,+Lima,+Per%C3%BA">
+                            Av. Ejemplo 123, Lima, Perú</a>
+                        </li>
                     </ul>
                     <li><h6 className='pt-2'><i className="bi bi-clock"/> Horario de atención:</h6></li>
                     <ul>
                         <li>Lunes a Viernes: 9:00 AM - 6:00 PM</li>
                         <li>Sábados: 10:00 AM - 2:00 PM</li>
-                        <li>Domingos: Cerrado</li>
                     </ul>                     
                 </ul>
             </div>

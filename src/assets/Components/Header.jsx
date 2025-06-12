@@ -9,10 +9,10 @@ export default function Header() {
   return (
     <header >
       <ul className='nav justify-content-end gap-3 p-2'>
-        <Link className='nav-item' to={ "/IngresarU" }>
+        <Link className='nav-link' to={ "/IngresarU" }>
           <i className='bi bi-people' />Usuario
         </Link>
-        <Link className='nav-item' to={ "/IngresarI" }>
+        <Link className='nav-link' to={ "/IngresarI" }>
           Intranet
         </Link>
       </ul>

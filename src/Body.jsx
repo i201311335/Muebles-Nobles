@@ -16,19 +16,22 @@ export default function Body() {
   return (
     <>
       <Header />
-        <main  style={{ backgroundImage: `url(${bg[0]})`}}>
-        <Routes>
+      <main style={{ backgroundImage: `url(${bg[0]})` }} className='d-grid'>
+        <div />
+        <div className='content'>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
             <Route path="/Catalogo" element={<Catalogo />} />
             <Route path="/Reparaciones" element={<Reparaciones />} />
-            <Route path="/Intranet" element={<IngresarI />} />
-            <Route path="/Carrito" element={<Carrito />} />
-            <Route path="/Login" element={<IngresarU />} />
+            <Route path="/IngresarU" element={<IngresarU />} />
+            <Route path="/IngresarI" element={<IngresarI />} />
             <Route path="/Registro" element={<Registro />} />
+            <Route path="/Carrito" element={<Carrito />} />
           </Routes>
-        </main>
-      <Footer />
+        </div>
+        <Footer />
+      </main>
     </>
   );
 }

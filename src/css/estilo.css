@@ -9,23 +9,32 @@ Header{
 
 Header .logo , Footer .logo{
     width: 10rem;
-    
-}
+    }
 
-Main{
-    padding-top:10rem;
-    background: fixed no-repeat center center/100% 100%;
+main{
+    grid-template-areas:"." "content" "Footer";
+    grid-template-rows:10rem 1fr auto;
+    background: no-repeat center center/100% 100%;
     min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    place-items: center;
 }
 
+.content {
+    grid-area: content;
+    width: 100%;
+    max-width: 1200px;
 
+}
+.imgform{
+    mask-image: linear-gradient(to right, transparent, black 20%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%);
+}
 
 Footer{
-    background: cover no-repeat center center/100% 100%;
+    background:fixed no-repeat center center/100% 100%;
     font-size: small;
-}
 
+}
 
 
 Footer :is(a, li, p){
