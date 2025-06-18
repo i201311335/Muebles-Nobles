@@ -1,7 +1,6 @@
-import Orejero from './orejero.png';
+import Orejero from './orejero.jpg';
 import Relax from './relax.jpg';
 
-export default {
-  Orejero,
-  Relax
-};
+const Ergos = [Orejero, Relax];
+
+export default Ergos;

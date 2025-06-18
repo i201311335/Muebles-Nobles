@@ -5,7 +5,7 @@ import { FormFooter, SocialIcons } from '@/assets/Components/Footer/';
 //se incorpora, como FormFooter (Formulario del Pie), SocialIcons (Iconos de las Redes sociales).
 export default function Footer() {
   return (
-      <footer style={{ backgroundImage: `url(${bg[1]})` }}>
+      <footer style={{ backgroundImage: `url(${bg[2]})` }}>
         <div className="d-flex justify-content-center border-top border-warning"  >  
             <div className="col col-3">
                 <li className='pt-4 px-auto'>
@@ -17,8 +17,8 @@ export default function Footer() {
                     <li>Únete al equipo</li>
                     <li>Código de ética para proveedores</li>
                 </ul>  
-                <div className='d-flex justify-content-center'>
-                    <img className=' w-75 logo' src={logo[1]} alt='logof' />
+                <div className='row justify-content-center'>
+                    <img className=' w-75  logo' src={logo[1]} alt='logof' />
                 </div>
                 <p className='text-center px-4 pt-2'>© 2025 Grupo 3. <br /> Todos los derechos reservados.</p>
                 <SocialIcons />

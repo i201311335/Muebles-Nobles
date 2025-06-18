@@ -1,19 +1,20 @@
 import { mSofa } from '@/assets/Imgs/sofa/modern/';
+import { ban } from '@/assets/Imgs';
 
 export default function Home() {
     return (
         <>
-            <section className='col col-10 mx-auto'>
-                <div id="carouselExampleCrossfade" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+            <section className=''>
+                <div  className="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src={mSofa[0] } className="d-block w-25"  alt="..."/>
+                        <div className="carousel-item active" data-bs-interval="2000" >
+                            <img src={ban[0] } className="d-block w-50"  alt="..."/>
                         </div>
-                        <div className="carousel-item">
-                            <img src={mSofa[1]}  className="d-block w-25" alt="..."/>
+                        <div className="carousel-item" data-bs-interval="2000">
+                            <img src={ban[1]}  className="d-block w-50" alt="..."/>
                         </div>
-                        <div className="carousel-item">
-                            <img src={mSofa[2]}  className="d-block w-25" alt="..."/>
+                        <div className="carousel-item" data-bs-interval="2000">
+                            <img src={ban[0]}  className="d-block w-50" alt="..."/>
                         </div>
                     </div>
                 </div>
@@ -22,7 +23,7 @@ export default function Home() {
             <section className='col col-10 bg-secondary mx-auto'>
                 <h1 className='text-center'>Productos destacables</h1>
                 <div className='row row-cols-5 justify-content-center '>
-                    <div className=''>
+                    <div >
                         <div className='card  w-100'>
                             <img src={mSofa[0]} alt="" className='' />
                             <p>Hola hola</p>      
@@ -62,16 +63,8 @@ export default function Home() {
 
             <br />
 
-            <section>
-                <div><img src="" alt="" /></div>
-                <div><img src="" alt="" /></div>
-                <div><img src="" alt="" /></div>
-                <div><img src="" alt="" /></div>
-                <div><img src="" alt="" /></div>
-                <div><img src="" alt="" /></div>
-                <div><img src="" alt="" /></div>
-                <div><img src="" alt="" /></div>
-            </section>
+            
+            
         </>
     );
 }

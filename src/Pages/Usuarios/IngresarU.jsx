@@ -3,11 +3,11 @@ import { mSofa } from '@/assets/Imgs/sofa/modern/';
 export default function IngresarU() {
     return (
         <>  
-            <section className="row g-0 bg-white border rounded ">
-                <div className="col col-7  p-5 shadow-lg   ">
-                    <h2 className="text-center text-dark">Iniciar Sesión</h2>
-                    <div className="row justify-content-center ">
-                        <form className="col col-7 p-5 text-center">
+            <section className="row col-8 g-0 bg-white border rounded">
+                <div className="col col-7  p-5 pe-0 shadow-lg-white">
+                    <div className="row justify-content-center">
+                        <h2 className="text-center text-dark">Iniciar Sesión</h2>  
+                        <form className="col col-8 p-5 text-center">
                             <div className="mb-3 text-start">
                                 <label htmlFor="email" className="form-label">Correo Electrónico</label>
                                 <input type="email" className="form-control" id="email" placeholder="Ingrese su correo electrónico" />
@@ -21,10 +21,8 @@ export default function IngresarU() {
                             </div>
                             <button type="submit" className="btn btn-primary">Iniciar Sesión</button>  
                         </form>
-                        <div>
-                            <p className="text-center">¿No tienes una cuenta? <a href="/RegistrarU">Regístrate aquí</a></p> 
-                        </div>
-                        <div>
+                        <p className="text-center">¿No tienes una cuenta? <a href="/Registro">Regístrate aquí</a></p>
+                        <div >
                             <p className="text-center">O inicia sesión con:</p>
                             <div className="d-flex justify-content-center">
                                 <button className="btn btn-outline-primary me-2"><i className="bi bi-facebook"></i> Facebook</button>

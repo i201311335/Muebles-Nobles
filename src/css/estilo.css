@@ -1,51 +1,55 @@
 
+
 Header{
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
     backdrop-filter:blur(7px);
     box-shadow: 0 -5px 10px 3px black;
 }
 
-Header .logo , Footer .logo{
-    width: 10rem;
+    Header .logo , Footer .logo{
+        width: 10rem;
     }
 
 main{
-    grid-template-areas:"." "content" "Footer";
-    grid-template-rows:10rem 1fr auto;
-    background: no-repeat center center/100% 100%;
-    min-height: 100vh;
-    place-items: center;
+    background: fixed no-repeat center center/100% 100%;  
 }
 
-.content {
-    grid-area: content;
-    width: 100%;
-    max-width: 1200px;
-
-}
-.imgform{
-    mask-image: linear-gradient(to right, transparent, black 20%);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 20%);
-}
+    .imgform{
+        
+        mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.792) 70%);
+    }
 
 Footer{
     background:fixed no-repeat center center/100% 100%;
     font-size: small;
+    width: 100%;
 
 }
 
 
-Footer :is(a, li, p){
-    color: white;
-    text-decoration: none;
-    padding-block: .1rem;
-    list-style: none;
-    font-size: .7rem;
-}
+    Footer :is(a, li, p){
+        color: white;
+        text-decoration: none;
+        padding-block: .1rem;
+        list-style: none;
+        font-size: .7rem;
+    }
 
+    .imgcat{
+        mask-image: radial-gradient(circle , black 50%, transparent 85%);
+        width: 100%;
+    }
 
-
-
+    .nomcat
+    {
     
+    
+    }
+
+   .step-img{
+    
+    object-fit: cover;
+    width: 35%;
+   } 

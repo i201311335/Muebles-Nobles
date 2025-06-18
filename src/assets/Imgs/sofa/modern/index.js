@@ -6,6 +6,6 @@ import Sf3 from './sf3.png';
 import Sf4 from './sf4.png';
 
 const mSofa = [Sf1, Sf2, Sf3, Sf4];
-const mTipo = [Club, Escandin];
+const Modern = [Club, Escandin];
 
-export { mSofa, mTipo };
+export { mSofa, Modern };
