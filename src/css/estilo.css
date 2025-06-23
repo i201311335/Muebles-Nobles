@@ -1,55 +1,43 @@
-
-
-Header{
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    backdrop-filter:blur(7px);
-    box-shadow: 0 -5px 10px 3px black;
+Header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 -5px 10px 3px black;
 }
 
-    Header .logo , Footer .logo{
-        width: 10rem;
-    }
-
-main{
-    background: fixed no-repeat center center/100% 100%;  
+Header .logo,
+Footer .logo {
+  width: 10rem;
 }
 
-    .imgform{
-        
-        mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.792) 70%);
-    }
-
-Footer{
-    background:fixed no-repeat center center/100% 100%;
-    font-size: small;
-    width: 100%;
-
+main {
+  background: fixed no-repeat center center/100% 100%;
 }
 
+.imgform {
+  mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.792) 70%);
+}
 
-    Footer :is(a, li, p){
-        color: white;
-        text-decoration: none;
-        padding-block: .1rem;
-        list-style: none;
-        font-size: .7rem;
-    }
+Footer {
+  background: fixed no-repeat center center/100% 100%;
+  font-size: small;
+  width: 100%;
+}
+Footer :is(a, li, p) {
+  color: white;
+  text-decoration: none;
+  padding-block: 0.1rem;
+  list-style: none;
+  font-size: 0.7rem;
+}
 
-    .imgcat{
-        mask-image: radial-gradient(circle , black 50%, transparent 85%);
-        width: 100%;
-    }
+.imgcat {
+  mask-image: radial-gradient(circle, black 50%, transparent 85%);
+  width: 100%;
+}
 
-    .nomcat
-    {
-    
-    
-    }
-
-   .step-img{
-    
-    object-fit: cover;
-    width: 35%;
-   } 
+.step-img {
+  object-fit: cover;
+  width: 35%;
+}

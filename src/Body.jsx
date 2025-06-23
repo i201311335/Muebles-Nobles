@@ -7,10 +7,10 @@ import { Carrito } from './Pages/Shop/Index';
 import { bg } from '@/assets/Imgs/';
 
 //Este es el cuerpo de la página web
-// Ya saben que HTML, las partes básicas son: Header(cabeza), Main (cuerpo) y Footer(pies)
-//El Header y Footer tiene sus respectivos esqueletos, main será las páginas que cambiará.
-//Main envuelve a la etiqueta  Routes que sirven como rutas.
-// Permite que cada archivos que se encuentra en carpeta Pages, excepto index, sea mostrado
+// Teniendo en cuentalas partes básicas del html son: Header(encabeza), Main (cuerpo) y Footer(pie)
+//El Header y Footer son componentes "estaticos", la etiqueta main será donde sufrirá cambio dinámico(páginas).
+//Main envuelve a la etiqueta  Routes,cual se activará condiciones dependiendo de la página.
+
 
 export default function Body() {
 
@@ -20,12 +20,13 @@ export default function Body() {
   const isIngresarI = location.pathname === '/IngresarI';
   const isRegistro = location.pathname === '/Registro';
 
+  
   return (
     <>
       <Header />
       <main style={{ backgroundImage: `url(${bg[0]})` }} className={isCatalogo ? 'catalogo-scroll ' : 'd-grid'}>
         <div />
-        <div className={ isCatalogo || isIngresarU || isIngresarI || isRegistro ? 'content-form' : 'content'}>
+        <div id='contenedor' className={ isIngresarU || isIngresarI || isRegistro ? 'content-form' : 'content'}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
