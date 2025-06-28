@@ -1,35 +1,41 @@
+
 main {
+  display: grid;
   grid-template-areas: "." "content" "Footer";
   grid-template-rows: 10rem 1fr auto;
-  grid-area: content;
   min-height: 100vh;
-  
 }
 
-.content {
+.content-web {
+  grid-area: content;
   place-items: center;
-  width: 100%;
-  
 }
-
 .content-form {
+  grid-area: content;
   place-items: center;
   place-content: center;
-
 }
 
-.catalogo-scroll {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+Footer{
+  grid-area: "Footer";
 }
 
-.cardcat {
+.divfalse
+{
   display: flex;
+  position:sticky;
   height: 100vh;
-  scroll-snap-align: start;
+  background-color: transparent;
+  top:0;
+}
+.divscroll {
+  display: flex;
+  position: sticky;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  top: 0;
+  background-size: cover;
+  
+  top:0;
 }
+

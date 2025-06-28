@@ -13,7 +13,7 @@ import {forwardRef, useState} from "react";
                 ref={ref} name={props.name} id={props.id} value={props.value} onChange={props.onChange}
                 placeholder="Ingresar su contraseña" maxLength={15} minLength={12} className={`form-control border border-5 border-end-0 rounded-start shadow-none ${inputColor}`}
             />
-            <button type="button" class={`btn btn-dark border-start-0 rounded-end border-5 ${inputColor}`} ref={ref} onClick={() => setMostrar((x) => !x)}>
+            <button type="button" class={`btn border border-start-0 rounded-end border-5 ${inputColor}`} ref={ref} onClick={() => setMostrar((x) => !x)}>
                 <i className={`bi ${mostrar ? "bi-eye-slash" : "bi-eye"}`} />
             </button>
         </>

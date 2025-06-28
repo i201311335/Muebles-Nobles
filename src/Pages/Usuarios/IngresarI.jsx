@@ -1,23 +1,30 @@
+import PswReveal from "../../assets/Components/Content/PswReveal";
+
 export default function IngresarI() {
     return (
-        <>  
-            <div className="container">
-                <div className="row justify-content-center align-items-center ">
-                    <div className="col col-8 bg-light p-5 shadow border rounded">
-                    <h2 className="text-center text-dark">Iniciar Sesión</h2>
-                        <form>
-                            <div className="mb-3 col-6">
-                                <label htmlFor="email" className="form-label">Correo Electrónico</label>
+        <>
+            <div className="d-flex justify-content-center align-items-center shadow border rounded">
+                <div className=" bg-light p-5 ">
+                    <h2 className="text-center "><i className="bi bi-buildings" /> Intranet </h2>
+                    <form>
+                        <div className="row mb-3 ">
+                            <label htmlFor="email" className="form-label">Usuario</label>
+                            <div className="input-group ">
+                                <i className="input-group-text bi bi-people" />
                                 <input type="email" className="form-control" id="email" placeholder="Ingrese su correo electrónico" />
                             </div>
-                            <div className="mb-3 col-6">
-                                <label htmlFor="password" className="form-label">Contraseña</label>
-                                <input type="password" className="form-control" id="password" placeholder="Ingrese su contraseña" />
+
+                        </div>
+                        <div className="mb-3 ">
+                            <label htmlFor="password" className="form-label">Contraseña</label>
+                            <div className="input-group">
+                                <PswReveal name="password" />
                             </div>
-                            <a href="/"></a>
-                            <button type="submit" className="btn btn-primary ">Iniciar Sesión</button>
-                        </form>
-                    </div>
+                        </div>
+                        <div className="text-center p-3"> 
+                            <button type="submit" className="btn btn-dark ">Iniciar Sesión</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </>

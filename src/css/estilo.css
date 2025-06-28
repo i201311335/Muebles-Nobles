@@ -15,8 +15,11 @@ main {
   background: fixed no-repeat center center/100% 100%;
 }
 
-.imgform {
-  mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.792) 70%);
+#gradleft {
+  mask-image: linear-gradient(to left, transparent, black 50%);
+}
+#gradright{
+  mask-image: linear-gradient(to right, transparent, black 30%);
 }
 
 Footer {
@@ -41,3 +44,10 @@ Footer :is(a, li, p) {
   object-fit: cover;
   width: 35%;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+

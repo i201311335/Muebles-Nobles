@@ -1,42 +1,69 @@
+import { useState } from "react";
 import Clasic from '../assets/Imgs/sofa/clasic/';
 import Ergo from '../assets/Imgs/sofa/ergos/';
 import { Modern } from '../assets/Imgs/sofa/modern/';
-import Carrusel from '../assets/Anims/Carrusel.jsx'
 import { Fade } from 'react-awesome-reveal';
 
-export default function Index() {
+const productos = [
+  { id: 1, nombre: "Sofá Clásico", categoria: "Clásico", imagen: Clasic[0], precio: 1200 },
+  { id: 2, nombre: "Sofá Ergonómico", categoria: "Ergonómico", imagen: Ergo[0], precio: 1500 },
+  { id: 3, nombre: "Sofá Moderno", categoria: "Moderno", imagen: Modern[0], precio: 1800 },
+  // Agrega más productos aquí
+];
+
+export default function Catalogo() {
+  const [busqueda, setBusqueda] = useState("");
+
+
+  const productosFiltrados = productos.filter(
+    (prod) =>
+      prod.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
+      prod.categoria.toLowerCase().includes(busqueda.toLowerCase())
+  );
 
   return (
     <>
-      <div className='row cardcat ' >
-        <Fade duration={2000} className="col-10">
-          <Carrusel sofa={Clasic} intervalo={5000} />
-          <Fade  delay={1200} className='nomcat'>
-            <h2 className="text-warning display-1 mt-5">Clásico</h2>
-            <p className=" mt-3">Aquí puedes encontrar una lista de nuestros productos disponibles.</p>
-          </Fade>
-        </Fade>
-          
-      </div>
+      <div className="d-grid bg-light border border-5 p-4">
+        <div className="row ">
 
-      <div  className="row my-5 cardcat ">
-        <Fade duration={2000} className="col-10">
-          <Carrusel sofa={Ergo} intervalo={5000} />
-        </Fade>
-        <Fade  delay={1200} className='nomcat'>
-          <h2 className="text-warning text-center display-1 mt-5">Moderno</h2>
-          <p className="text-center mt-3">Selecciona un producto para ver más detalles.</p>
-        </Fade>
-      </div>
+          <div className="bg-gradient col-3 ">
+            <div className="input-group  ">
+              <div className="col-2">
+                <button className="bi bi-search btn shadow border border-4 " type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" />
+              </div>
+              <div className="col-9" >
+                <div className="input-group collapse collapse-horizontal" id="collapseWidthExample">
+                  <input type="text" className="form-control " placeholder="Buscar.." value={busqueda} onChange={e => setBusqueda(e.target.value)} />
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div  className="row cardcat">
-        <Fade duration={1000} className="col-10">
-          <Carrusel sofa={Modern} intervalo={5000}/>
-        </Fade>
-        <Fade  delay={1200} className='nomcat justify-content-center'>
-          <h2 className="text-warning text-center display-1 mt-5">Ergonómico</h2>
-          <p className="text-center mt-3">Revisa los productos que has agregado a tu carrito.</p>
-        </Fade>
+
+
+          <div className="row row-cols-3  bg-light col-9">
+            {productosFiltrados.length === 0 && (
+              <div className="col text-center text-muted">No se encontraron productos.</div>
+            )}
+            {productosFiltrados.map((prod) => (
+              <div className="col" key={prod.id}>
+                <Fade>
+                  <div className="card h-100 shadow-sm">
+                    <img src={prod.imagen} className="card-img-top" alt={prod.nombre} />
+                    <div className="card-body">
+                      <h5 className="card-title">{prod.nombre}</h5>
+                      <p className="card-text">{prod.categoria}</p>
+                      <p className="card-text fw-bold text-danger">S/ {prod.precio}</p>
+                      <button className="btn btn-primary w-100">Ver detalles</button>
+                    </div>
+                  </div>
+                </Fade>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </>
   );
